@@ -1,8 +1,62 @@
-wisata-religi/
-├── index.html         (Beranda)
-├── profil.html        (Profil)
-├── layanan.html       (Layanan)
-├── galeri.html        (Galeri)
-├── kontak.html        (Kontak)
-├── style.css          (File CSS)
-└── script.js          (File JavaScript)
+/* style.scss */
+$primary-color: #2a7a6d;
+$secondary-color: #f4f4f9;
+$text-color: #333;
+
+body {
+    font-family: Arial, sans-serif;
+    color: $text-color;
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+main {
+    padding: 20px;
+    h2 {
+        color: $primary-color;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: $primary-color;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
