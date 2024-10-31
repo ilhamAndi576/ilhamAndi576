@@ -1,20 +1,28 @@
+/* Reset dan Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
 }
 
+/* Header */
 header {
     background-color: #2a7a6d;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.8em;
 }
 
 header nav {
@@ -24,38 +32,75 @@ header nav {
 header nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 header nav a:hover {
-    text-decoration: underline;
+    background-color: #1d5a50;
+    text-decoration: none;
 }
 
+/* Main Section */
 main {
-    padding: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 main h2 {
     color: #2a7a6d;
+    font-size: 1.6em;
+    margin-bottom: 20px;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #2a7a6d;
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 0.9em;
 }
 
+/* Galeri */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+    margin-top: 20px;
 }
 
 .gallery img {
     width: 100%;
     border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
